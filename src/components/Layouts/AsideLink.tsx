@@ -22,8 +22,8 @@ const AsideLink = React.memo(function AsideLink({ href, label, icon: Icon, activ
       active && "bg-blue-500 text-white hover:bg-blue-600",
       isCollapsed && "justify-center"
     )}>
-      <Icon className="h-5 w-5" strokeWidth={1} />
-      {!isCollapsed && <span className="ml-4 font-medium">{label}</span>}
+      <Icon className="h-5 w-5 flex-shrink-0" strokeWidth={1} />
+      {!isCollapsed && <span className="ml-4 font-medium overflow-hidden whitespace-nowrap text-ellipsis">{label}</span>}
     </div>
   );
 

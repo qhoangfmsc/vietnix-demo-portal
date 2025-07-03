@@ -52,7 +52,7 @@ export function AsideNav() {
     return (
         <aside
             className={cn(
-                "flex flex-col w-64 h-full bg-white shadow-md border-r transition-all duration-300 ease-in-out",
+                "flex flex-col w-64 h-full bg-white shadow-md border-r transition-all duration-300 ease-in-out overflow-hidden",
                 isCollapsed ? "w-20" : "w-64"
             )}
         >
@@ -112,7 +112,7 @@ export function AsideNav() {
                                 </TooltipProvider>
                             ) : (
                                 <h2 className={cn(
-                                    "text-sm text-gray-500 uppercase tracking-wider px-3 mb-1"
+                                    "text-sm text-gray-500 uppercase tracking-wider px-3 mb-1 overflow-hidden whitespace-nowrap text-ellipsis"
                                 )}>
                                     {group.title}
                                 </h2>
