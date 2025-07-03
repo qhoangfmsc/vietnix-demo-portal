@@ -3,6 +3,7 @@ import "../assets/styles/globals.css";
 import HeaderComponent from "../components/Layouts/Header";
 import FooterComponent from "../components/Layouts/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { AsideNav } from "@/components/Layouts/AsideNav";
 
 export const metadata: Metadata = {
   title: "Vietnix Store - VIETNIX.VN",
@@ -15,14 +16,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        <LanguageProvider>
-          <HeaderComponent />
-          {children}
-          <FooterComponent />
-        </LanguageProvider>
-      </body>
-    </html>
+<html lang="en">
+  <body className="min-h-screen flex flex-col">
+    <LanguageProvider>
+      <div className="flex flex-col flex-1 min-h-screen">
+        <HeaderComponent />
+        <div className="flex flex-1">
+          <main className="flex-1 bg-gray-50">
+            {children}
+          </main>
+        </div>
+        <FooterComponent />
+      </div>
+    </LanguageProvider>
+  </body>
+</html>
+
   );
 }

@@ -1,3 +1,4 @@
+import React from 'react';
 import SocialComponent from "../Socials/SocialHeader";
 import LanguageSwitchingButton from "../Languages/LanguageSwitchingButton";
 import CartButton from "../Services/CartButton";
@@ -5,10 +6,9 @@ import CartButton from "../Services/CartButton";
 export interface SubHeaderProps {
 }
 
-const SubHeaderComponent: React.FC<SubHeaderProps> = () => {
+const SubHeaderComponent: React.FC<SubHeaderProps> = React.memo(() => {
     return (
-        <header className="w-full p-1 px-3 border-b border-gray-200
-            flex flex-row justify-between">
+        <header className="p-1 px-3 border-b border-gray-200 flex flex-row justify-between">
             <SocialComponent />
             <div className="flex flex-wrap items-center gap-2 md:flex-row">
                 <CartButton/>
@@ -16,6 +16,6 @@ const SubHeaderComponent: React.FC<SubHeaderProps> = () => {
             </div>
         </header>
     );
-};
+});
 
 export default SubHeaderComponent;
