@@ -4,18 +4,40 @@ import Link from "next/link";
 import RegisterButton from "../Auths/RegisterButton";
 import LoginButton from "../Auths/LoginButton";
 import UserDropdown from "../Auths/UserDropdown";
+import UserDropdownModal from "@/components/Auths/UserDropdownModal";
+import DrawerAsideNav from "./DrawerAsideNav";
+import { Menu, User } from "lucide-react";
 
 const CoreHeader: React.FC = React.memo(() => {
   return (
-    <header className="flex items-center justify-between px-8 py-2 border-b border-gray-200 bg-white">
-      <Link className="py-3" href="/">
+    <header className="flex items-center justify-between px-4 lg:px-8 py-2 border-b border-gray-200 bg-white">
+      <Link className="flex-shrink-0 py-3 w-28 lg:w-40" href="/">
         <Image src="/logo.svg" alt="Vietnix" width={160} height={50} priority />
       </Link>
-      
+
+
       <div className="flex items-center gap-3">
         <RegisterButton />
-        <LoginButton />
-        <UserDropdown />
+
+        {/* DESKTOP */}
+        <div className="hidden lg:flex items-center gap-3">
+          <LoginButton />
+          <UserDropdown />
+        </div>
+
+        {/* MOBILE */}
+        {/* <div className="flex lg:hidden items-center gap-3">
+          <UserDropdownModal trigger={
+            <button className="p-2 rounded-full border border-gray-200 bg-white">
+              <User className="h-6 w-6" />
+            </button>
+          } />
+          <DrawerAsideNav trigger={
+            <button className="p-2 rounded-md border border-gray-200 bg-white">
+              <Menu className="h-6 w-6" />
+            </button>
+          } />
+        </div> */}
       </div>
     </header>
   );

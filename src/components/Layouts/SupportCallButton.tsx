@@ -17,10 +17,10 @@ const SupportCallButton = React.memo(function SupportCallButton({ label, icon: I
                 "flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
                 isCollapsed && "justify-center"
             )}
-            style={{ textDecoration: 'none' }}
+            style={{ textDecoration: 'none' }} 
         >
-            <Icon className="h-5 w-5" strokeWidth={1} />
-            {!isCollapsed && <span className="ml-4 font-medium">{label}</span>}
+            <Icon className="h-5 w-5 flex-shrink-0" strokeWidth={1} />
+            {!isCollapsed && <span className="ml-4 font-medium overflow-hidden whitespace-nowrap text-ellipsis">{label}</span>}
         </a>
     );
 });

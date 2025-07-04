@@ -35,21 +35,23 @@ const SocialComponent: React.FC<SocialComponent> = () => {
     ]
 
     return (
-        <div className="flex flex-wrap items-center gap-2 text-gray-500">
-            {socialArray.map((social) => (
-                <Button
-                    key={social.name}
-                    className="hover:text-blue-400"
-                    size="sm"
-                    variant="ghost"
-                    asChild
-                >
-                    <Link href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                        {social.icon}
-                        <span>{social.name}</span>
-                    </Link>
-                </Button>
-            ))}
+        <div className="block">
+            <div className="hidden md:flex flex-wrap items-center gap-2 text-gray-500">
+                {socialArray.map((social) => (
+                    <Button
+                        key={social.name}
+                        className="hover:text-blue-400"
+                        size="sm"
+                        variant="ghost"
+                        asChild
+                    >
+                        <Link href={social.href} target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
+                            {social.icon}
+                            <span>{social.name}</span>
+                        </Link>
+                    </Button>
+                ))}
+            </div>
         </div>
     )
 }
