@@ -1,24 +1,25 @@
 import { useEffect, useState } from "react";
 
 interface UseFetchOptions {
-  params?: Record<string, any>;
+  params?: Record<string, string | number | boolean | undefined | null>;
   options?: RequestInit;
 }
 
-function buildQuery(params?: Record<string, any>) {
+function buildQuery(params?: Record<string, string | number | boolean | undefined | null>) {
   if (!params) return "";
   const esc = encodeURIComponent;
   return (
     "?" +
     Object.entries(params)
-      .map(([k, v]) => `${esc(k)}=${esc(v)}`)
+      .filter(([, value]) => value !== undefined && value !== null)
+      .map(([key, value]) => `${esc(key)}=${esc(value as string | number | boolean)}`)
       .join("&")
   );
 }
 
-export function useFetch<T = any>(url: string, { params, options }: UseFetchOptions = {}) {
+export function useFetch<T = unknown>(url: string, { params, options }: UseFetchOptions = {}) {
   const [data, setData] = useState<T | null>(null);
-  const [error, setError] = useState<any>(null);
+  const [error, setError] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -36,8 +37,8 @@ export function useFetch<T = any>(url: string, { params, options }: UseFetchOpti
         if (!res.ok) throw new Error(await res.text());
         const json = await res.json();
         if (isMounted) setData(json);
-      } catch (err: any) {
-        if (err.name !== "AbortError" && isMounted) setError(err);
+      } catch (err: unknown) {
+        if (err instanceof Error && err.name !== "AbortError" && isMounted) setError(err);
       } finally {
         if (isMounted) setLoading(false);
       }

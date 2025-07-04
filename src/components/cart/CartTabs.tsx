@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
 import { cartTabItems } from "@/config/cartTab/CartTabItems";
+import CartDetailTabs from "./CartDetailTabs";
+import CartServiceSection from "./CartServiceSection";
 
 export default function CartTabs() {
   return (
@@ -15,7 +17,7 @@ export default function CartTabs() {
             <TabsTrigger
               key={item.value}
               value={item.value}
-              className="max-w-fit px-4 py-2 text-sm font-medium border-b-2 border-transparent transition-all duration-150 data-[state=active]:border-blue-500 data-[state=active]:text-blue-500 flex items-center gap-2"
+              className="max-w-fit px-4 py-2 text-sm font-medium border-b-2 border-transparent transition-all duration-150 data-[state=active]:border-blue-500 data-[state=active]:text-blue-500 flex items-center gap-2 cursor-pointer hover:text-blue-400"
             >
               <Icon />
               {item.label}
@@ -23,9 +25,15 @@ export default function CartTabs() {
           );
         })}
       </TabsList>
+
+      {/* Tabs content */}
       {cartTabItems.map((item) => (
         <TabsContent key={item.value} value={item.value} className="min-h-[120px]">
-          <div className="text-center text-lg font-semibold py-8">Nội dung mô phỏng cho tab "{item.label}"</div>
+          {item.detailTabs ? (
+            <CartDetailTabs detailTabs={item.detailTabs} />
+          ) : (
+            <CartServiceSection apiUrl={item.apiUrl} />
+          )}
         </TabsContent>
       ))}
     </Tabs>

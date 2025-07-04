@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import PlusScaleUpIcon from "../animatedIcons/PlusScaleUpIcon";
+import PlusScaleUpIcon from "../icons/PlusScaleUpIcon";
 
 const RegisterButton: React.FC = () => (
   <Button asChild className="bg-[linear-gradient(282deg,_#00b0ff_5.54%,_#3e98eb)] text-[17px]" size="lg" variant="default">
