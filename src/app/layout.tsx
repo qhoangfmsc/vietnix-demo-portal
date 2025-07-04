@@ -3,6 +3,7 @@ import "@/assets/styles/globals.css";
 import HeaderComponent from "@/components/layouts/HeaderComponent";
 import FooterComponent from "@/components/layouts/FooterComponent";
 import { LanguageProvider } from "@/context/LanguageContext";
+import { NotiProvider } from "@/components/notifications/CustomNoti";
 
 export const metadata: Metadata = {
   title: "Vietnix Store - VIETNIX.VN",
@@ -15,21 +16,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-<html lang="en">
-  <body className="min-h-screen flex flex-col">
-    <LanguageProvider>
-      <div className="flex flex-col flex-1 min-h-screen">
-        <HeaderComponent />
-        <div className="flex flex-1">
-          <main className="flex-1 bg-gray-50">
-            {children}
-          </main>
-        </div>
-        <FooterComponent />
-      </div>
-    </LanguageProvider>
-  </body>
-</html>
+    <html lang="en">
+      <body className="min-h-screen flex flex-col">
+        <NotiProvider />
+        <LanguageProvider>
+          <div className="flex flex-col flex-1 min-h-screen">
+            <HeaderComponent />
+            <div className="flex flex-1">
+              <main className="flex-1 bg-gray-50">
+                {children}
+              </main>
+            </div>
+            <FooterComponent />
+          </div>
+        </LanguageProvider>
+      </body>
+    </html>
 
   );
 }

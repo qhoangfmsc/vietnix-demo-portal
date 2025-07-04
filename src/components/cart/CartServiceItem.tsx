@@ -1,6 +1,8 @@
 import * as React from "react";
 import { Button } from "../ui/button";
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from "../ui/select";
+import { notify } from "@/components/notifications/CustomNoti";
+import { Loader2Icon } from "lucide-react";
 
 interface Price {
   name: string;
@@ -19,6 +21,20 @@ export default function CartServiceItem({ service }: CartServiceItemProps) {
     ([key]) => key !== "serviceName" && key !== "priceList"
   );
   const [selected, setSelected] = React.useState("0");
+  const [buyProcess, setBuyProcess] = React.useState(false);
+
+  const handleClickServiceItem = () => {
+    setBuyProcess(true);
+    const price = service.priceList[Number(selected)];
+    notify.loading("Đang tiến hành mua...", { duration: 2000 });
+    setTimeout(() => {
+      notify.success(
+        `Đã mua sản phẩm: ${service.serviceName}`,
+        { description: price ? `Gói: ${price.name} - ${price.price}` : undefined },
+      );
+      setBuyProcess(false);
+    }, 2000);
+  }
 
   return (
     <div className="w-full rounded-xl border border-gray-200 bg-white shadow-sm overflow-hidden">
@@ -46,8 +62,12 @@ export default function CartServiceItem({ service }: CartServiceItemProps) {
             ))}
           </SelectContent>
         </Select>
-        <Button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded py-2 mt-1 transition">
-          Đăng ký
+        <Button
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded py-2 mt-1 transition cursor-pointer"
+          onClick={handleClickServiceItem}
+          disabled={buyProcess}
+        >
+          {buyProcess ? <Loader2Icon className="animate-spin" /> : "Đăng ký"}
         </Button>
       </div>
     </div>
