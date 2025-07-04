@@ -73,7 +73,7 @@ export function AsideNav() {
                                             </div>
                                         </TooltipTrigger>
                                         <TooltipContent side="right" className="min-w-[80px]">
-                                            <div className="font-bold text-sm text-gray-800">{group.title}</div>
+                                            <div className="font-bold text-sm">{group.title}</div>
                                         </TooltipContent>
                                     </Tooltip>
                                 </TooltipProvider>
