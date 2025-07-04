@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import "../assets/styles/globals.css";
-import HeaderComponent from "../components/Layouts/Header";
-import FooterComponent from "../components/Layouts/Footer";
+import HeaderComponent from "../components/layouts/Header";
+import FooterComponent from "../components/layouts/Footer";
 import { LanguageProvider } from "@/context/LanguageContext";
-import { AsideNav } from "@/components/Layouts/AsideNav";
+import { AsideNav } from "@/components/layouts/AsideNav";
 
 export const metadata: Metadata = {
   title: "Vietnix Store - VIETNIX.VN",

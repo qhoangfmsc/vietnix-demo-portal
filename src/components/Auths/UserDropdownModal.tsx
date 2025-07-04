@@ -2,7 +2,7 @@
 import * as React from "react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Link from "next/link";
-import { userDropdownItems } from "./userDropdownItems";
+import { userDropdownItems } from "../../config/userDropdownItems";
 import { Button } from "@/components/ui/button";
 
 export default function UserDropdownModal({ trigger }: { trigger: React.ReactNode }) {

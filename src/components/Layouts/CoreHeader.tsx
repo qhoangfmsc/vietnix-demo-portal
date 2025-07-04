@@ -1,10 +1,10 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import RegisterButton from "../Auths/RegisterButton";
-import LoginButton from "../Auths/LoginButton";
-import UserDropdown from "../Auths/UserDropdown";
-import UserDropdownModal from "@/components/Auths/UserDropdownModal";
+import RegisterButton from "../auths/RegisterButton";
+import LoginButton from "../auths/LoginButton";
+import UserDropdown from "../auths/UserDropdown";
+import UserDropdownModal from "@/components/auths/UserDropdownModal";
 import DrawerAsideNav from "./DrawerAsideNav";
 import { Menu, User } from "lucide-react";
 

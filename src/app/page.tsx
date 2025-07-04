@@ -1,4 +1,4 @@
-import { AsideNav } from "@/components/Layouts/AsideNav";
+import { AsideNav } from "@/components/layouts/AsideNav";
 
 export default function Home() {
   return (
