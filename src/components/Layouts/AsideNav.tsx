@@ -7,7 +7,7 @@ import { cn } from '@/lib/utils';
 import AsideLink from './AsideLink';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import SupportCallButton from './SupportCallButton';
-import { asideNavGroups } from '../../config/asideNavGroups';
+import { asideNavGroups } from '../../config/asideMenu/AsideNavGroups';
 
 export function AsideNav() {
     const [isCollapsed, setIsCollapsed] = useState(false);

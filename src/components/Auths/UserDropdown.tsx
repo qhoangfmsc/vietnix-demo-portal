@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { LogOut, User, Users, Mail, Lock, Settings, Repeat2, BookUser } from "lucide-react";
-import { userDropdownItems } from '../../config/userDropdownItems';
+import { userDropdownItems } from '../../config/userMenu/UserDropdownItems';
 
 const user = {
   name: "User",

@@ -1,7 +1,7 @@
 import React from 'react';
 import SocialComponent from "../socials/SocialHeader";
 import LanguageSwitchingButton from "../languages/LanguageSwitchingButton";
-import CartButton from "../services/CartButton";
+import CartButton from "../cart/CartButton";
 
 export interface SubHeaderProps {
 }

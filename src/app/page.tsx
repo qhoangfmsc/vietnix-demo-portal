@@ -1,3 +1,4 @@
+import GeneralCartSection from "@/components/cart/GeneralCartSection";
 import { AsideNav } from "@/components/layouts/AsideNav";
 
 export default function Home() {
@@ -6,9 +7,8 @@ export default function Home() {
       <div className="hidden lg:block">
         <AsideNav />
       </div>
-      <main className="p-8">
-        <h1 className="text-3xl font-bold">Content Area</h1>
-        <p>Đây là khu vực nội dung chính.</p>
+      <main className="p-8 mx-auto">
+        <GeneralCartSection />
       </main>
     </div>
   );

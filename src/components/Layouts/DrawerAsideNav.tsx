@@ -1,7 +1,7 @@
 "use client";
 import * as React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { asideNavGroups } from "../../config/asideNavGroups";
+import { asideNavGroups } from "../../config/asideMenu/AsideNavGroups";
 import AsideLink from "./AsideLink";
 import SupportCallButton from "./SupportCallButton";
 import { Grip } from "lucide-react";

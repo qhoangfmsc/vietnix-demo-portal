@@ -12,7 +12,7 @@ const CoreHeader: React.FC = React.memo(() => {
   return (
     <header className="flex items-center justify-between px-4 lg:px-8 py-2 border-b border-gray-200 bg-white">
       <Link className="flex-shrink-0 py-3 w-28 lg:w-40" href="/">
-        <Image src="/logo.svg" alt="Vietnix" width={160} height={50} priority />
+        <Image src="/images/logo.svg" alt="Vietnix" width={160} height={50} priority />
       </Link>
 
 
