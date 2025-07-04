@@ -1,8 +1,9 @@
+import GeneralCartSection from '@/components/cart/GeneralCartSection'
 import React from 'react'
 
 function Cart() {
   return (
-    <div>page</div>
+    <GeneralCartSection />
   )
 }
 

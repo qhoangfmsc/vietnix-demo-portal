@@ -4,6 +4,7 @@ import HeaderComponent from "@/components/layouts/HeaderComponent";
 import FooterComponent from "@/components/layouts/FooterComponent";
 import { LanguageProvider } from "@/context/LanguageContext";
 import { NotiProvider } from "@/components/notifications/CustomNoti";
+import { AsideNav } from "@/components/layouts/aside/AsideNavComponent";
 
 export const metadata: Metadata = {
   title: "Vietnix Store - VIETNIX.VN",
@@ -23,9 +24,16 @@ export default function RootLayout({
           <div className="flex flex-col flex-1 min-h-screen">
             <HeaderComponent />
             <div className="flex flex-1">
-              <main className="flex-1 bg-gray-50">
-                {children}
-              </main>
+              <div className="flex-1 bg-gray-50">
+                <div className="flex flex-row h-full w-full">
+                  <div className="hidden lg:block">
+                    <AsideNav />
+                  </div>
+                  <main className="h-full w-full p-2 sm:p-8 sm:mx-auto">
+                    {children}
+                  </main>
+                </div>
+              </div>
             </div>
             <FooterComponent />
           </div>

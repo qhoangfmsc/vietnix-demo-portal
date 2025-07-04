@@ -1,10 +1,10 @@
 "use client";
 import * as React from "react";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { asideNavGroups } from "../../config/asideMenu/AsideNavGroups";
-import AsideLink from "./AsideLink";
-import SupportCallButton from "./SupportCallButton";
 import { Grip } from "lucide-react";
+import { asideNavGroups } from "@/config/asideMenu/AsideNavGroups";
+import SupportCallButton from "@/components/layouts/SupportCallButton";
+import AsideLink from "@/components/layouts/aside/AsideLink";
 
 export default function DrawerAsideNav({ trigger }: { trigger: React.ReactNode }) {
   const [open, setOpen] = React.useState(false);

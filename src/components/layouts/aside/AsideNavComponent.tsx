@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { ChevronLeft, Grip } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import AsideLink from '@/components/layouts/AsideLink';
 import SupportCallButton from '@/components/layouts/SupportCallButton';
-import { asideNavGroups } from '@/config/asideMenu/AsideNavGroups';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
+import { asideNavGroups } from '@/config/asideMenu/AsideNavGroups';
+import AsideLink from '@/components/layouts/aside/AsideLink';
 
 export function AsideNav() {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -23,6 +23,7 @@ export function AsideNav() {
                 isCollapsed ? "w-20" : "w-64"
             )}
         >
+            {/* MINIMIZE/EXPAND ASIDE MENU BUTTON */}
             <div className="p-4 text-gray-400">
                 {isCollapsed ? (
                     <TooltipProvider>
@@ -60,6 +61,8 @@ export function AsideNav() {
                     </Button>
                 )}
             </div>
+
+            {/* UTILS BUTTON */}
             <div className="flex-1 overflow-y-auto p-4 space-y-8">
                 {asideNavGroups.map((group, groupIndex) => (
                     <div key={groupIndex} className="space-y-2">

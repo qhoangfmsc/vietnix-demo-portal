@@ -5,8 +5,8 @@ import RegisterButton from "@/components/auths/RegisterButton";
 import LoginButton from "@/components/auths/LoginButton";
 import UserDropdown from "@/components/auths/UserDropdown";
 import UserDropdownModal from "@/components/auths/UserDropdownModal";
-import DrawerAsideNav from "@/components/layouts/DrawerAsideNav";
 import { Menu, User } from "lucide-react";
+import DrawerAsideNav from '@/components/layouts/aside/DrawerAsideNav';
 
 const CoreHeader: React.FC = React.memo(function CoreHeader() {
   return (
