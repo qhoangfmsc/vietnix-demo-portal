@@ -26,7 +26,7 @@ const CoreHeader: React.FC = React.memo(() => {
         </div>
 
         {/* MOBILE */}
-        {/* <div className="flex lg:hidden items-center gap-3">
+        <div className="flex lg:hidden items-center gap-3">
           <UserDropdownModal trigger={
             <button className="p-2 rounded-full border border-gray-200 bg-white">
               <User className="h-6 w-6" />
@@ -37,7 +37,7 @@ const CoreHeader: React.FC = React.memo(() => {
               <Menu className="h-6 w-6" />
             </button>
           } />
-        </div> */}
+        </div>
       </div>
     </header>
   );
