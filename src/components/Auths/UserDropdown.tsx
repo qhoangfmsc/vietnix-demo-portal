@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -8,15 +8,12 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { LogOut, User, Users, Mail, Lock, Settings, Repeat2, BookUser } from "lucide-react";
-import { userDropdownItems } from '../../config/userMenu/UserDropdownItems';
+import { userDropdownItems } from '@/config/userMenu/UserDropdownItems';
 
 const user = {
   name: "User",
   email: "user@email.com",
 };
-
-const iconClass = "w-5 h-5 mr-3";
 
 const UserDropdown: React.FC = () => {
   return (

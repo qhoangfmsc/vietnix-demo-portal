@@ -1,13 +1,13 @@
 "use client";
 
 import { useState } from 'react';
-import { ChevronLeft, Home, Package, Globe, User, FileText, Download, Share2, LifeBuoy, Phone, Grip } from 'lucide-react';
+import { ChevronLeft, Grip } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import AsideLink from './AsideLink';
+import AsideLink from '@/components/layouts/AsideLink';
+import SupportCallButton from '@/components/layouts/SupportCallButton';
+import { asideNavGroups } from '@/config/asideMenu/AsideNavGroups';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
-import SupportCallButton from './SupportCallButton';
-import { asideNavGroups } from '../../config/asideMenu/AsideNavGroups';
 
 export function AsideNav() {
     const [isCollapsed, setIsCollapsed] = useState(false);

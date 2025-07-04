@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useFetch } from "@/hook/useFetch";
+import Image from "next/image";
 
 export default function CartBannerCarousel() {
   const { data: banners, error, loading } = useFetch<{ src: string; alt: string }[]>("/mockup-datas/banners/CartBanners.json");
@@ -22,15 +23,17 @@ export default function CartBannerCarousel() {
     <Carousel
       plugins={[Autoplay({ delay: 10000, stopOnInteraction: false })]}
       opts={{ loop: true }}
-      className="w-full h-32 md:h-40 rounded-lg overflow-hidden mb-6"
+      className="hidden lg:block w-full h-fit rounded-lg overflow-hidden mb-6"
     >
       <CarouselContent>
         {banners.map((banner, i) => (
-          <CarouselItem key={i} className="h-32 md:h-40">
-            <img
+          <CarouselItem key={i} className="h-fit">
+            <Image
               src={banner.src}
               alt={banner.alt}
-              className="w-full h-32 md:h-40 object-cover rounded-lg"
+              width={1280}
+              height={300}
+              className="w-full h-fit object-contain rounded-lg"
             />
           </CarouselItem>
         ))}

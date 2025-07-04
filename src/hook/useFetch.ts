@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 
 interface UseFetchOptions {
   params?: Record<string, string | number | boolean | undefined | null>;
@@ -22,13 +22,15 @@ export function useFetch<T = unknown>(url: string, { params, options }: UseFetch
   const [error, setError] = useState<unknown>(null);
   const [loading, setLoading] = useState(false);
 
+  const paramsString = useMemo(() => JSON.stringify(params), [params]);
+  const optionsString = useMemo(() => JSON.stringify(options), [options]);
+
   useEffect(() => {
     if (!url) return;
     let isMounted = true;
     setLoading(true);
     setError(null);
     setData(null);
-
 
     const controller = new AbortController();
     (async () => {
@@ -44,12 +46,11 @@ export function useFetch<T = unknown>(url: string, { params, options }: UseFetch
       }
     })();
 
-    
     return () => {
       isMounted = false;
       controller.abort();
     };
-  }, [url, JSON.stringify(params), JSON.stringify(options)]);
+  }, [url, paramsString, optionsString, params, options]);
 
   return { data, error, loading };
 }

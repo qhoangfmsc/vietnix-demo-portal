@@ -1,20 +1,19 @@
 import React from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import RegisterButton from "../auths/RegisterButton";
-import LoginButton from "../auths/LoginButton";
-import UserDropdown from "../auths/UserDropdown";
+import RegisterButton from "@/components/auths/RegisterButton";
+import LoginButton from "@/components/auths/LoginButton";
+import UserDropdown from "@/components/auths/UserDropdown";
 import UserDropdownModal from "@/components/auths/UserDropdownModal";
-import DrawerAsideNav from "./DrawerAsideNav";
+import DrawerAsideNav from "@/components/layouts/DrawerAsideNav";
 import { Menu, User } from "lucide-react";
 
-const CoreHeader: React.FC = React.memo(() => {
+const CoreHeader: React.FC = React.memo(function CoreHeader() {
   return (
     <header className="flex items-center justify-between px-4 lg:px-8 py-2 border-b border-gray-200 bg-white">
       <Link className="flex-shrink-0 py-3 w-28 lg:w-40" href="/">
         <Image src="/images/logo.svg" alt="Vietnix" width={160} height={50} priority />
       </Link>
-
 
       <div className="flex items-center gap-3">
         <RegisterButton />

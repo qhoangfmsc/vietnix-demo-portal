@@ -1,10 +1,8 @@
 import React from 'react';
-import CoreHeader from "./CoreHeader";
-import SubHeaderComponent from "./SubHeader";
+import CoreHeader from "@/components/layouts/CoreHeader";
+import SubHeaderComponent from "@/components/layouts/SubHeader";
 
-export interface HeaderProps {}
-
-const HeaderComponent: React.FC<HeaderProps> = React.memo(() => {
+const HeaderComponent: React.FC = React.memo(function HeaderComponent() {
     return (
         <header className="border-gray-200 bg-white">
             <SubHeaderComponent />

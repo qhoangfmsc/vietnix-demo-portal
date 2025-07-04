@@ -1,43 +1,13 @@
-import { faFacebookF, faYoutube, faXTwitter, faTiktok, faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import React from "react";
+import { socialMediaArray } from "@/config/socialMedia/socialMedia";
 
-export interface SocialComponent { }
-
-const SocialComponent: React.FC<SocialComponent> = () => {
-    const socialArray = [
-        {
-            name: "Facebook",
-            href: "https://www.facebook.com/VietnixHosting/",
-            icon: <FontAwesomeIcon icon={faFacebookF} width={10} />
-        },
-        {
-            name: "Twitter",
-            href: "https://twitter.com/vietnix",
-            icon: <FontAwesomeIcon icon={faXTwitter} width={14} />
-        },
-        {
-            name: "Tiktok",
-            href: "https://www.tiktok.com/@vietnix",
-            icon: <FontAwesomeIcon icon={faTiktok} width={14} />
-        },
-        {
-            name: "LinkedIn",
-            href: "https://www.linkedin.com/company/vietnix-hosting/",
-            icon: <FontAwesomeIcon icon={faLinkedinIn} width={14} />
-        },
-        {
-            name: "YouTube",
-            href: "https://www.youtube.com/@vietnix",
-            icon: <FontAwesomeIcon icon={faYoutube} width={18} />
-        }
-    ]
-
+const SocialComponent: React.FC = React.memo(function SocialComponent() {
     return (
         <div className="block">
             <div className="hidden md:flex flex-wrap items-center gap-2 text-gray-500">
-                {socialArray.map((social) => (
+                {socialMediaArray.map((social) => (
                     <Button
                         key={social.name}
                         className="hover:text-blue-400"
@@ -54,6 +24,6 @@ const SocialComponent: React.FC<SocialComponent> = () => {
             </div>
         </div>
     )
-}
+})
 
 export default SocialComponent
