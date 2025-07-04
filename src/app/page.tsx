@@ -1,5 +1,5 @@
 import GeneralCartSection from "@/components/cart/GeneralCartSection";
-import { AsideNav } from "@/components/layouts/AsideNav";
+import { AsideNav } from "@/components/layouts/AsideNavComponent";
 
 export default function Home() {
   return (
