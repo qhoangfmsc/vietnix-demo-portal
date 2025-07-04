@@ -2,12 +2,12 @@ import { Home, Package, Globe, User, FileText, Download, Share2, LifeBuoy, Phone
 
 export const asideNavGroups = [
     {
-        links: [{ href: "/dashboard", label: "Trang chủ", icon: Home }]
+        links: [{ href: "/dashboard", label: "Trang chủ", icon: Home, active: true }]
     },
     {
         title: "DỊCH VỤ",
         links: [
-            { href: "/services", label: "Dịch vụ của tôi", icon: Package, active: true },
+            { href: "/services", label: "Dịch vụ của tôi", icon: Package },
             { href: "/domains", label: "Quản lý tên miền", icon: Globe },
         ]
     },
