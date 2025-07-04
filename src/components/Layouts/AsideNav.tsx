@@ -7,40 +7,7 @@ import { cn } from '@/lib/utils';
 import AsideLink from './AsideLink';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import SupportCallButton from './SupportCallButton';
-
-const navGroups = [
-    {
-        links: [{ href: "/dashboard", label: "Trang chủ", icon: Home }]
-    },
-    {
-        title: "DỊCH VỤ",
-        links: [
-            { href: "/services", label: "Dịch vụ của tôi", icon: Package, active: true },
-            { href: "/domains", label: "Quản lý tên miền", icon: Globe },
-        ]
-    },
-    {
-        title: "TÀI KHOẢN",
-        links: [
-            { href: "/account-info", label: "Thông tin tài khoản", icon: User },
-            { href: "/invoices", label: "Hóa đơn", icon: FileText },
-            { href: "/themes-plugins", label: "Theme & Plugin", icon: Download },
-        ]
-    },
-    {
-        title: "ĐỐI TÁC",
-        links: [
-            { href: "/affiliate", label: "Affiliate Program", icon: Share2 },
-        ]
-    },
-    {
-        title: "HỖ TRỢ",
-        links: [
-            { href: "/support-request", label: "Yêu cầu hỗ trợ", icon: LifeBuoy },
-            { href: "", label: "Hỗ trợ: 1800 1093", icon: Phone },
-        ]
-    }
-];
+import { asideNavGroups } from './asideNavGroups';
 
 export function AsideNav() {
     const [isCollapsed, setIsCollapsed] = useState(false);
@@ -94,7 +61,7 @@ export function AsideNav() {
                 )}
             </div>
             <div className="flex-1 overflow-y-auto p-4 space-y-8">
-                {navGroups.map((group, groupIndex) => (
+                {asideNavGroups.map((group, groupIndex) => (
                     <div key={groupIndex} className="space-y-2">
                         {group.title && (
                             isCollapsed ? (
