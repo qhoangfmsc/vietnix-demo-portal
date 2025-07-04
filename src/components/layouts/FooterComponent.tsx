@@ -9,3 +9,4 @@ const FooterComponent: React.FC = React.memo(function FooterComponent() {
 });
 
 export default FooterComponent;
+
