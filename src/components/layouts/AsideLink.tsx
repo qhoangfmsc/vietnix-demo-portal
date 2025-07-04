@@ -20,7 +20,7 @@ const AsideLink = React.memo(function AsideLink({ href, label, icon: Icon, activ
     <div className={cn(
       "flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
       active && "bg-blue-500 text-white hover:bg-blue-600",
-      isCollapsed && "justify-center"
+      isCollapsed && "justify-start"
     )}>
       <Icon className="h-5 w-5 flex-shrink-0" strokeWidth={1} />
       {!isCollapsed && <span className="ml-4 font-medium overflow-hidden whitespace-nowrap text-ellipsis">{label}</span>}

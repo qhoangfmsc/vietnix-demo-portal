@@ -68,7 +68,7 @@ export function AsideNav() {
                                 <TooltipProvider>
                                     <Tooltip delayDuration={0}>
                                         <TooltipTrigger asChild>
-                                            <div className="flex justify-center">
+                                            <div className="flex justify-center items-center">
                                                 <Grip className="h-5 w-5 text-gray-400" strokeWidth={1} />
                                             </div>
                                         </TooltipTrigger>
