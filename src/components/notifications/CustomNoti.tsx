@@ -6,12 +6,12 @@ import React from "react";
 
 const variantConfig = {
     info: {
-        bg: "bg-primary/10",
+        bg: "bg-primary",
         color: "text-primary",
         icon: <Info className="text-primary" />,
     },
     error: {
-        bg: "bg-destructive/10",
+        bg: "bg-destructive",
         color: "text-destructive",
         icon: <XCircle className="text-destructive" />,
     },
@@ -21,12 +21,12 @@ const variantConfig = {
         icon: <Loader2 className="animate-spin text-muted-foreground" />,
     },
     warn: {
-        bg: "bg-warning/10",
+        bg: "bg-warning",
         color: "text-warning",
         icon: <AlertTriangle className="text-warning" />,
     },
     success: {
-        bg: "bg-success/10",
+        bg: "bg-success",
         color: "text-success",
         icon: <CheckCircle2 className="text-success" />,
     },

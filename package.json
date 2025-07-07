@@ -7,7 +7,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "check-dev": "npm run lint && tsc --noEmit && npm run build && npm run dev",
+    "check-start": "npm run lint && tsc --noEmit && npm run build && npm run start"
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx}": "eslint --fix"
