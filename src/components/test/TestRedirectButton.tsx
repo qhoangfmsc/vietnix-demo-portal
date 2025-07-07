@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function TestRedirectButton() {
     return (
-        <Button asChild>
+        <Button variant="outline" size="lg" asChild>
             <Link href="/test">
                 Test
             </Link>
