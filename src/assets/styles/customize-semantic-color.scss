@@ -1,0 +1,41 @@
+// Semantic color definitions
+$semantic-colors: (
+  success: oklch(0.72 0.19 142),
+  warning: oklch(0.95 0.18 85),
+);
+
+// Attribute class
+$semantic-attributes: (
+  bg: background-color,
+  text: color,
+  border: border-color,
+  ring: --tw-ring-color,
+  shadow: --tw-shadow-color,
+  outline: outline-color,
+);
+
+// Process pseudo class
+$pseudo-attributes: (hover, focus, active, disabled);
+
+// Config root
+:root {
+  @each $name, $color in $semantic-colors {
+    --#{$name}: #{$color};
+  }
+}
+
+// Main function process 2 array configs
+@each $color-name, $color-value in $semantic-colors {
+  @each $class-prefix, $css-prop in $semantic-attributes {
+    // Base class
+    .#{$class-prefix}-#{$color-name} {
+      #{$css-prop}: var(--#{$color-name});
+    }
+    // Pseudo classes
+    @each $pseudo in $pseudo-attributes {
+      .#{$pseudo}\:#{$class-prefix}-#{$color-name}:#{$pseudo} {
+        #{$css-prop}: var(--#{$color-name});
+      }
+    }
+  }
+}
