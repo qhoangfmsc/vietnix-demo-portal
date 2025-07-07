@@ -1,0 +1,62 @@
+// 1. Semantic color definitions
+$semantic-colors: (
+  success: oklch(0.72 0.19 142),
+  warning: oklch(0.95 0.18 85),
+);
+
+// 2. Attribute class: gộp property và options
+$semantic-attributes: (
+  bg: (
+    background-color: value,
+  ),
+  text: (
+    color: value,
+  ),
+  border: (
+    border-color: value,
+  ),
+  ring: (
+    --tw-ring-color: value,
+  ),
+  shadow: (
+    --tw-shadow-color: value,
+  ),
+  outline: (
+    outline-color: value,
+  ),
+);
+
+// Config root
+:root {
+  @each $name, $color in $semantic-colors {
+    --#{$name}: #{$color};
+  }
+}
+
+// Main function process 2 array configs
+@each $color-name, $color-value in $semantic-colors {
+  @each $class-prefix, $attr-map in $semantic-attributes {
+    // Base class
+    .#{$class-prefix}-#{$color-name} {
+      @each $prop, $val in $attr-map {
+        @if $val == value {
+          #{$prop}: var(--#{$color-name});
+        } @else {
+          #{$prop}: #{$val};
+        }
+      }
+    }
+    // Pseudo classes
+    @each $pseudo in (hover, focus, active, disabled) {
+      .#{$pseudo}\:#{$class-prefix}-#{$color-name}:#{$pseudo} {
+        @each $prop, $val in $attr-map {
+          @if $val == value {
+            #{$prop}: var(--#{$color-name});
+          } @else {
+            #{$prop}: #{$val};
+          }
+        }
+      }
+    }
+  }
+}

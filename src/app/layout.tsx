@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "@/assets/styles/globals.css";
+import "@/assets/styles/customize-semantic.scss"
 import HeaderComponent from "@/components/layouts/HeaderComponent";
 import FooterComponent from "@/components/layouts/FooterComponent";
 import { LanguageProvider } from "@/contexts/LanguageContext";

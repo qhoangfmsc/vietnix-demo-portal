@@ -7,7 +7,6 @@ import UserDropdown from "@/components/auths/UserDropdown";
 import UserDropdownModal from "@/components/auths/UserDropdownModal";
 import { Menu, User } from "lucide-react";
 import DrawerAsideNav from '@/components/layouts/aside/DrawerAsideNav';
-import TestRedirectButton from '../test/TestRedirectButton';
 
 const CoreHeader: React.FC = React.memo(function CoreHeader() {
   return (
@@ -17,7 +16,7 @@ const CoreHeader: React.FC = React.memo(function CoreHeader() {
       </Link>
 
       <div className="flex items-center gap-3">
-        <TestRedirectButton />
+        {/* <TestRedirectButton /> */}
         <RegisterButton />
 
         {/* DESKTOP */}
