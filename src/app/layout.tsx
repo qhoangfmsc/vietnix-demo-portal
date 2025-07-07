@@ -17,7 +17,7 @@ const RootLayout: React.FC<{
 }> = React.memo(function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-gray-50">
+      <body className="min-h-screen flex flex-col bg-background">
         <NotiProvider />
         <LanguageProvider>
           <div className="flex flex-col min-h-screen">

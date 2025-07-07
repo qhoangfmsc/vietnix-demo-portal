@@ -18,8 +18,8 @@ interface AsideLinkProps {
 const AsideLink = React.memo(function AsideLink({ href, label, icon: Icon, active = false, isCollapsed }: AsideLinkProps) {
   const linkContent = (
     <div className={cn(
-      "flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
-      active && "bg-blue-500 text-white hover:bg-blue-600",
+      "flex items-center p-3 rounded-lg transition-colors",
+      active ? "bg-primary text-primary-foreground hover:bg-primary/70" : "text-foreground hover:bg-primary/20 hover:text-primary",
       isCollapsed && "justify-start"
     )}>
       <Icon className="h-5 w-5 flex-shrink-0" strokeWidth={1} />

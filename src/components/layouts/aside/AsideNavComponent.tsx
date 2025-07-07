@@ -21,14 +21,14 @@ export const AsideNav: React.FC = React.memo(function AsideNav() {
         <StickyAsideWrapper threshold={120}>
             <aside
                 className={cn(
-                    "flex flex-col h-full bg-white shadow-md border-r transition-all duration-300 ease-in-out overflow-hidden",
+                    "flex flex-col h-full bg-card shadow-md border-r transition-all duration-300 ease-in-out overflow-hidden",
                     isCollapsed ? "w-20" : "w-64"
                 )}
                 role="navigation"
                 aria-label="Main navigation"
             >
                 {/* MINIMIZE/EXPAND ASIDE MENU BUTTON */}
-                <div className="p-4 text-gray-400">
+                <div className="p-4 text-muted-foreground">
                     {isCollapsed ? (
                         <TooltipProvider>
                             <Tooltip delayDuration={0}>
@@ -79,7 +79,7 @@ export const AsideNav: React.FC = React.memo(function AsideNav() {
                                         <Tooltip delayDuration={0}>
                                             <TooltipTrigger asChild>
                                                 <div className="flex items-center px-3 mb-1 justify-start">
-                                                    <Grip className="h-5 w-5 text-gray-400" strokeWidth={1} aria-hidden="true" />
+                                                    <Grip className="h-5 w-5 text-muted-foreground" strokeWidth={1} aria-hidden="true" />
                                                 </div>
                                             </TooltipTrigger>
                                             <TooltipContent side="right" className="min-w-[80px]">
@@ -91,7 +91,7 @@ export const AsideNav: React.FC = React.memo(function AsideNav() {
                                     <h2 
                                         key="expanded-title"
                                         className={cn(
-                                            "text-sm text-gray-500 uppercase tracking-wider px-3 mb-1 overflow-hidden whitespace-nowrap text-ellipsis"
+                                            "text-sm text-muted-foreground uppercase tracking-wider px-3 mb-1 overflow-hidden whitespace-nowrap text-ellipsis"
                                         )}
                                     >
                                         {group.title}

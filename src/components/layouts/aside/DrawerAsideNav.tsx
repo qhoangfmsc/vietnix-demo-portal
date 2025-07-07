@@ -19,8 +19,8 @@ export default function DrawerAsideNav({ trigger }: { trigger: React.ReactNode }
           {asideNavGroups.map((group, groupIndex) => (
             <div key={groupIndex} className="space-y-2">
               {group.title && (
-                <div className="flex items-center gap-2 px-3 mb-1 text-sm text-gray-500 uppercase tracking-wider">
-                  <Grip className="h-4 w-4 text-gray-400" strokeWidth={1} />
+                <div className="flex items-center gap-2 px-3 mb-1 text-sm text-muted-foreground uppercase tracking-wider">
+                  <Grip className="h-4 w-4 text-muted-foreground" strokeWidth={1} />
                   <span>{group.title}</span>
                 </div>
               )}

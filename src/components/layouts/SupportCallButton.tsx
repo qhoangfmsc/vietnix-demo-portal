@@ -15,7 +15,7 @@ const SupportCallButton = React.memo(function SupportCallButton({ label, icon: I
         <a
             href="tel:18001093"
             className={cn(
-                "flex items-center p-3 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors",
+                "flex items-center p-3 rounded-lg text-muted-foreground hover:bg-muted transition-colors",
                 isCollapsed && "justify-start"
             )}
             style={{ textDecoration: 'none' }} 

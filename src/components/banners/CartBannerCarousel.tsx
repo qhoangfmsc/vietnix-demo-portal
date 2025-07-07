@@ -16,7 +16,7 @@ export default function CartBannerCarousel() {
   const { data: banners, error, loading } = useFetch<{ src: string; alt: string }[]>("/mockup-datas/banners/CartBanners.json");
 
   if (loading) return <div className="w-full h-32 md:h-40 bg-muted animate-pulse rounded-lg mb-6" />;
-  if (error) return <div className="text-red-500">Lỗi tải banner</div>;
+  if (error) return <div className="text-destructive">Lỗi tải banner</div>;
   if (!banners) return null;
 
   return (

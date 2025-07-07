@@ -6,11 +6,11 @@ import { socialMediaArray } from "@/configs/socialMedia/socialMedia";
 const SocialComponent: React.FC = React.memo(function SocialComponent() {
     return (
         <div className="block">
-            <div className="hidden md:flex flex-wrap items-center gap-2 text-gray-500">
+            <div className="hidden md:flex flex-wrap items-center gap-2 text-muted-foreground">
                 {socialMediaArray.map((social) => (
                     <Button
                         key={social.name}
-                        className="hover:text-blue-400"
+                        className="hover:text-primary"
                         size="sm"
                         variant="ghost"
                         asChild

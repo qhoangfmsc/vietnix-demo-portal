@@ -7,7 +7,7 @@ const CartButton: React.FC = () => {
   return (
     <Tooltip>
       <TooltipTrigger>
-        <Button className="hover:text-blue-400" variant="ghost" size="icon" asChild>
+        <Button className="hover:text-primary" variant="ghost" size="icon" asChild>
           <Link href="/cart">
             <ShoppingBag />
           </Link>

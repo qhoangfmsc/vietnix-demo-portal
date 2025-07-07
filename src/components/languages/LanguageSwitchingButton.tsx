@@ -14,14 +14,14 @@ import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip
 
 const LanguageSwitchingButton: React.FC = () => {
   const { lang, setLanguageFunction } = useLanguage();
-  const activeClass = "font-semibold text-blue-400";
+  const activeClass = "font-semibold text-primary";
 
   return (
     <DropdownMenu>
       <Tooltip>
         <TooltipTrigger asChild>
           <DropdownMenuTrigger asChild>
-            <Button className="hover:text-blue-400" variant="ghost" size="icon" aria-label="Change language">
+            <Button className="hover:text-primary" variant="ghost" size="icon" aria-label="Change language">
               <Globe size={20} />
             </Button>
           </DropdownMenuTrigger>

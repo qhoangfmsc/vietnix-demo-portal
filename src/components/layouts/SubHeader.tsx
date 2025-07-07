@@ -5,7 +5,7 @@ import CartButton from "@/components/cart/CartButton";
 
 const SubHeaderComponent: React.FC = React.memo(function SubHeaderComponent(){
     return (
-        <header className="p-1 px-3 border-b border-gray-200 flex flex-row justify-between">
+        <header className="p-1 px-3 border-b border-border flex flex-row justify-between">
             <SocialComponent />
             <div className="flex flex-wrap items-center gap-2 md:flex-row">
                 <CartButton/>

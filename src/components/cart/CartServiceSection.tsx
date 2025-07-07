@@ -16,8 +16,8 @@ export default function CartServiceSection({ apiUrl }: { apiUrl?: string }) {
   const { data, error, loading } = useFetch<Service[]>(apiUrl || "");
 
   if (!apiUrl) return null;
-  if (loading) return <div className="text-center text-gray-400 py-8">Đang tải dữ liệu...</div>;
-  if (error) return <div className="text-center text-red-500 py-8">Lỗi tải dữ liệu</div>;
+  if (loading) return <div className="text-center text-muted-foreground py-8">Đang tải dữ liệu...</div>;
+  if (error) return <div className="text-center text-destructive py-8">Lỗi tải dữ liệu</div>;
   if (!data) return null;
 
   return (

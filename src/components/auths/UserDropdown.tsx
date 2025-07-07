@@ -28,7 +28,7 @@ const UserDropdown: React.FC = () => {
             </Avatar>
             <div className="flex flex-col items-start ml-2">
               <span className="font-semibold text-lg leading-tight">{user.name}</span>
-              <span className="text-base text-gray-500 leading-tight">{user.email}</span>
+              <span className="text-base text-muted-foreground leading-tight">{user.email}</span>
             </div>
           </Button>
         </DropdownMenuTrigger>

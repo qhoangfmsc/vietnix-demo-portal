@@ -10,7 +10,7 @@ import DrawerAsideNav from '@/components/layouts/aside/DrawerAsideNav';
 
 const CoreHeader: React.FC = React.memo(function CoreHeader() {
   return (
-    <header className="flex items-center justify-between px-4 lg:px-8 py-2 border-b border-gray-200 bg-white">
+    <header className="flex items-center justify-between px-4 lg:px-8 py-2 border-b border-border bg-card">
       <Link className="flex-shrink-0 py-3 w-28 lg:w-40" href="/">
         <Image src="/images/logo.svg" alt="Vietnix" width={160} height={50} priority />
       </Link>
@@ -27,12 +27,12 @@ const CoreHeader: React.FC = React.memo(function CoreHeader() {
         {/* MOBILE */}
         <div className="flex lg:hidden items-center gap-3">
           <UserDropdownModal trigger={
-            <button className="p-2 rounded-full border border-gray-200 bg-white">
+            <button className="p-2 rounded-full border border-border bg-card">
               <User className="h-6 w-6" />
             </button>
           } />
           <DrawerAsideNav trigger={
-            <button className="p-2 rounded-md border border-gray-200 bg-white">
+            <button className="p-2 rounded-md border border-border bg-card">
               <Menu className="h-6 w-6" />
             </button>
           } />

@@ -6,29 +6,29 @@ import React from "react";
 
 const variantConfig = {
     info: {
-        bg: "bg-blue-100",
-        color: "text-blue-800",
-        icon: <Info className="text-blue-500" />,
+        bg: "bg-primary/10",
+        color: "text-primary",
+        icon: <Info className="text-primary" />,
     },
     error: {
-        bg: "bg-red-100",
-        color: "text-red-800",
-        icon: <XCircle className="text-red-500" />,
+        bg: "bg-destructive/10",
+        color: "text-destructive",
+        icon: <XCircle className="text-destructive" />,
     },
     loading: {
-        bg: "bg-gray-100",
-        color: "text-gray-800",
-        icon: <Loader2 className="animate-spin text-gray-500" />,
+        bg: "bg-muted",
+        color: "text-muted-foreground",
+        icon: <Loader2 className="animate-spin text-muted-foreground" />,
     },
     warn: {
-        bg: "bg-yellow-100",
-        color: "text-yellow-800",
-        icon: <AlertTriangle className="text-yellow-500" />,
+        bg: "bg-warning/10",
+        color: "text-warning",
+        icon: <AlertTriangle className="text-warning" />,
     },
     success: {
-        bg: "bg-green-100",
-        color: "text-green-800",
-        icon: <CheckCircle2 className="text-green-500" />,
+        bg: "bg-success/10",
+        color: "text-success",
+        icon: <CheckCircle2 className="text-success" />,
     },
 };
 
