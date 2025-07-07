@@ -9,7 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
-import { useFetch } from "@/hook/useFetch";
+import { useFetch } from "@/hooks/useFetch";
 import Image from "next/image";
 
 export default function CartBannerCarousel() {

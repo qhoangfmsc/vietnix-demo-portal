@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { cartTabItems } from "@/config/cartTab/CartTabItems";
+import { cartTabItems } from "@/configs/cartTab/CartTabItems";
 import CartDetailTabs from "./CartDetailTabs";
 import CartServiceSection from "./CartServiceSection";
 

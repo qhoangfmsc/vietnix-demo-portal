@@ -4,9 +4,9 @@ import SubHeaderComponent from "@/components/layouts/SubHeader";
 
 const HeaderComponent: React.FC = React.memo(function HeaderComponent() {
     return (
-        <header className="border-gray-200 bg-white">
+        <header className="border-gray-200 bg-white shadow-sm" role="banner">
             <SubHeaderComponent />
-            <CoreHeader/>
+            <CoreHeader />
         </header>
     );
 });

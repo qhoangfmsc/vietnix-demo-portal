@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import React from "react";
-import { socialMediaArray } from "@/config/socialMedia/socialMedia";
+import { socialMediaArray } from "@/configs/socialMedia/socialMedia";
 
 const SocialComponent: React.FC = React.memo(function SocialComponent() {
     return (

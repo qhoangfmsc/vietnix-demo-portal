@@ -8,7 +8,7 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { userDropdownItems } from '@/config/userMenu/UserDropdownItems';
+import { userDropdownItems } from '@/configs/userMenu/UserDropdownItems';
 
 const user = {
   name: "User",

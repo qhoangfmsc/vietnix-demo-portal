@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react";
-import { useFetch } from "@/hook/useFetch";
+import { useFetch } from "@/hooks/useFetch";
 import CartServiceItem from "./CartServiceItem";
 
 interface Price {
