@@ -7,28 +7,28 @@ import React from "react";
 const variantConfig = {
     info: {
         bg: "bg-primary",
-        color: "text-primary",
-        icon: <Info className="text-primary" />,
+        color: "text-primary-foreground",
+        icon: <Info className="text-primary-foreground flex-shrink-0" />,
     },
     error: {
         bg: "bg-destructive",
-        color: "text-destructive",
-        icon: <XCircle className="text-destructive" />,
+        color: "text-primary-foreground",
+        icon: <XCircle className="text-primary-foreground flex-shrink-0" />,
     },
     loading: {
         bg: "bg-muted",
         color: "text-muted-foreground",
-        icon: <Loader2 className="animate-spin text-muted-foreground" />,
+        icon: <Loader2 className="animate-spin text-muted-foreground flex-shrink-0" />,
     },
     warn: {
         bg: "bg-warning",
-        color: "text-warning",
-        icon: <AlertTriangle className="text-warning" />,
+        color: "text-primary-foreground",
+        icon: <AlertTriangle className="text-primary-foreground flex-shrink-0" />,
     },
     success: {
         bg: "bg-success",
-        color: "text-success",
-        icon: <CheckCircle2 className="text-success" />,
+        color: "text-primary-foreground",
+        icon: <CheckCircle2 className="text-primary-foreground flex-shrink-0" />,
     },
 };
 
