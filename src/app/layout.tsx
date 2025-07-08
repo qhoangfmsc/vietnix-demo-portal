@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import React from "react";
 import "@/assets/styles/globals.css";
-import "@/assets/styles/customize-semantic-color.scss"
+// import "@/assets/styles/customize-semantic-color.scss"
 import HeaderComponent from "@/components/layouts/HeaderComponent";
 import FooterComponent from "@/components/layouts/FooterComponent";
 import { LanguageProvider } from "@/contexts/LanguageContext";
@@ -18,7 +18,7 @@ const RootLayout: React.FC<{
 }> = React.memo(function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="min-h-screen flex flex-col bg-background">
+      <body className="min-h-screen flex flex-col">
         <NotiProvider />
         <LanguageProvider>
           <div className="flex flex-col min-h-screen">
